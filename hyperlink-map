@@ -1,0 +1,37 @@
+notation: 
+[...] for webpage
+<...> for pop-up window
+(...) for description
+#...  for html element
+
+Hyperlinks Map:
+
+[home] (homepage)
+	#navigator 
+		login 		-> [sign-up] & <log-on & log-off>
+		search 		-> [search results]
+		navigation 	-> [undefined]
+
+	#header (logo and simple intro)
+	
+	#menu (categorize all services)
+		menu sub-units	-> [category]
+		
+	#recommends
+		rcmds sub-units	-> [detailed]
+
+	#info (copyright and contacts)
+		copyright 	-> [copyright]
+		contacts	-> [contacts]
+
+[sign-up]
+
+[search results]
+
+[category]
+
+[detailed]
+
+[copyright]
+
+[contacts]
