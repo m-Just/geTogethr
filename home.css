@@ -1,0 +1,47 @@
+#navigator {
+	width : 100%;
+	height: 40px;
+	background: #000000;
+	color: #ffffff;	
+}
+
+#header {
+	width: 1024px; 
+	height: 250px;
+	background: #4D4DFF;
+	margin: auto;
+}
+
+#main {
+	width: 1024px;
+	height: 1024px;
+	margin: auto;
+}
+
+#menu {
+	width: 160px;
+	height: 1024px;
+	background: #38B0DE;
+	float: left;
+}
+
+#recommends {
+	width: 864px;
+	height: 1024px;
+	float: left;	
+}
+
+.unit {
+	width: 284px;
+	height: 252px;
+	float: left;
+	border: 2px black solid;
+	background: #FF2400; 
+}
+
+#info {
+	width: 100%;
+	height: 40px;
+	background: #000000;
+	color: #ffffff;
+}
