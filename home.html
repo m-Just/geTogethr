@@ -10,13 +10,13 @@
     	<script type="text/javascript" src="widget/bubble/alphabet.js"></script>
 </head>
 
-<body>
-	<div id="navigator" ng-app="nav" ng-controller="navCtrl" ng-click="navClicks($event)">
+<body ng-app="app" ng-controller="appCtrl" ng-click="clicks($event)">
+	<div id="navigator" ng-click="navClicks($event)">
 		<a id="signup" class="sign" href="signup.html">&nbsp注册&nbsp</a>
 		<a id="signin" class="sign" href="javascript:;">&nbsp登录&nbsp</a>
 		<div>
 			<!-- <img>search icon</img> -->
-			<input id="search" ng-class="obj.class" type="text" height="10px" value="搜索一下" />
+			<input id="search" type="text" height="10px" value="搜索一下" ng-class="obj.class" />
 		</div>
 	</div>
 	<div id="header">
@@ -49,10 +49,14 @@
 </html>
 
 <script>
-	var app = angular.module("nav", []);
-	app.controller("navCtrl", function($scope) {
-		$scope.navClicks = function(evt) {
-			$scope.class.background = "#eeeeee";
+	var app = angular.module("app", []);
+	app.controller("appCtrl", function($scope) {
+		$scope.clicks = function(evt) {   // handles #search ui display of FOCUSED and UNFOCUSED state
+			if (evt.target !== search) {
+				$('#search').css("background", "#555555");
+			} else {
+				$('#search').css("background", "#eeeeee");
+			}
 		}
 	});
 
