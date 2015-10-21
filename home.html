@@ -3,18 +3,27 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="home.css"></link>
-    	<script type="text/javascript" src="alphabet.js"></script>
-    	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/home.css"></link>
+    	<script type="text/javascript" src="widget/bubble/alphabet.js"></script>
 </head>
 
 <body>
-	<div id="navigator">navigator</div>   <!-- for navigation, search and login -->
+	<div id="navigator" ng-app="nav" ng-controller="navCtrl" ng-click="navClicks($event)">
+		<label id="signup" class="sign">&nbsp注册&nbsp</label>
+		<label id="signin" class="sign">&nbsp登录&nbsp</label>
+		<div>
+			<!-- <img>search icon</img> -->
+			<input id="search" ng-class="obj.class" type="text" height="10px" value="搜索一下" />
+		</div>
+	</div>
 	<div id="header">
     		<canvas id="myCanvas"></canvas>
-    		<script type="text/javascript" src="bubbles.js"></script>
-    		<script type="text/javascript" src="main.js"></script>
-	</div>
+    		<script type="text/javascript" src="widget/bubble/bubbles.js"></script>
+    		<script type="text/javascript" src="widget/bubble/main.js"></script>
+	</div><!--
 	<div id="main">
 		<div id="menu">menu</div>
 		<div id="recommends">
@@ -33,7 +42,18 @@
 		</div>
 	</div>
 	<br><br>
-	<div id="info">copyrights & contacts</div>
+	<div id="info">copyrights and contacts</div>
+	-->
 </body>
 
 </html>
+
+<script>
+	var app = angular.module("nav", []);
+	app.controller("navCtrl", function($scope) {
+		$scope.navClicks = function(evt) {
+			$scope.class.background = "#eeeeee";
+		}
+	});
+
+</script>
