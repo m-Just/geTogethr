@@ -14,7 +14,7 @@
 	<div id="navigator" ng-click="navClicks($event)">
 		<div id="navBars" class="pull_right">
 			<!-- <img>search icon</img> -->
-			<input id="search" type="text" value="搜索一下" ng-class="obj.class" />
+			<input id="search" type="text" value="搜索一下" />
 			<a id="signin" class="sign" href="javascript:;">登录</a>
 			<a id="signup" class="sign" href="signup.html">注册</a>
 		</div>
@@ -55,11 +55,15 @@
 	app.controller("appCtrl", function($scope) {
 		$scope.clicks = function(evt) {   // handles #search ui display of FOCUSED and UNFOCUSED state
 			if (evt.target !== search) {
-				$('#search').val("搜索一下");
-				$('#search').css("background", "#666666");
+				if ($('#search').val() == "") {
+					$('#search').val("搜索一下");
+				}
+				$('#search').css({"background": "#555555", "color": "#888888"});
 			} else {
-				$('#search').val("");
-				$('#search').css("background", "#eeeeee");
+				if ($('#search').val() == "搜索一下") {
+					$('#search').val("");
+				}
+				$('#search').css({"background": "#eeeeee", "color": "#000000"});
 			}
 		}
 	});
