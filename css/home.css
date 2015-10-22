@@ -3,25 +3,27 @@
 }
 
 #navigator {
+	z-index: 90;
 	width : 100%;
 	height: 50px;
 	position: fixed;
 	top: 0; left: 0;
-	background: #333333;
+	background: #000000;
+	opacity: 0.9;
 }
 
 #search {
 	height: 16px;
 	width: 170px;
 	margin-right: 30px; padding: 6px;
+	margin-bottom: 4px;
 	border-radius: 6px; border: none;
-	font-size: 15px;
 	background: #666666;
-	color: #888888;
+	color: #999999;
 }
 
 #navBars {
-	line-height: 50px;
+	line-height: 46px;
 	float: right;
 }
 
@@ -32,16 +34,23 @@
 }
 
 #header {
+	z-index: 50;
 	width: 1024px; 
-	height: 500px;
+	height: 400px;
 	background: #ddddff;
 	margin: auto;
+}
+
+#myCanvas {
+	position: relative;
+	top: -60px;
 }
 
 #main {
 	width: 1024px;
 	height: 1024px;
 	margin: auto;
+	background: #99ff99;
 }
 
 #menu {
@@ -61,8 +70,7 @@
 	width: 284px;
 	height: 252px;
 	float: left;
-	border: 2px black solid;
-	background: #FF2400; 
+	border: 1px black solid;
 }
 
 #info {
