@@ -1,6 +1,5 @@
 var myName = "geTogethr";
 
-var black = [0, 0, 0];
 var yellow = [60, 100, 60]; 
 var red = [0, 100, 63];
 var orange = [40, 100, 60];

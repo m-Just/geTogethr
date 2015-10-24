@@ -23,7 +23,7 @@ this.update = function () {
             var dd = (dx * dx) + (dy * dy);
             var d = Math.sqrt(dd);
  
-            point.targetPos.x = d < 150 ? point.curPos.x - dx : point.originalPos.x;
+            point.targetPos.x = d < 50 ? point.curPos.x - dx : point.originalPos.x;    // default d < 150
             point.targetPos.y = d < 150 ? point.curPos.y - dy : point.originalPos.y;
  
             point.update();
@@ -73,7 +73,7 @@ function Point(x, y, z, size, color) {
  
     this.friction = document.Friction;
     this.rotationForce = document.rotationForce;
-    this.springStrength = 0.1;
+    this.springStrength = 0.15;      // default value 0.1
  
     this.originalPos = new Vector(x, y, z);
     this.radius = size;
@@ -116,7 +116,7 @@ function Point(x, y, z, size, color) {
         ctx.fillStyle = this.color;
         if (bubbleShape == "square") {
             ctx.beginPath();
-            ctx.fillRect(this.curPos.x + dx, this.curPos.y + dy, this.radius * 1.5, this.radius * 1.5);
+            ctx.fillRect(this.curPos.x + dx, this.curPos.y + dy, this.radius * 1.618, this.radius * 1.618);  // default radius 1.5
         } else {
             ctx.beginPath();
             ctx.arc(this.curPos.x + dx, this.curPos.y + dy, this.radius, 0, Math.PI * 2, true);
@@ -300,10 +300,10 @@ var ctx;
 var pointCollection;
  
 document.rotationForce = 0.0;
-document.Friction = 0.85;
+document.Friction = 0.75;    // default value 0.85
 
 var white = [0, 0, 100];
-var black = [0, 0, 27];
+var black = [0, 0, 20];
 var red = [0, 100, 63];
 var orange = [40, 100, 60];
 var green = [75, 100, 40];
