@@ -12,7 +12,12 @@
 
 <body ng-app="app" ng-controller="appCtrl" ng-click="clicks($event)">
 	<div id="navigator" ng-click="navClicks($event)">
-		<div id="navBars" class="pull_right">
+		<div id="navLeft" class="pull_left">
+			<a id="home_link" href="home.html">
+				<h2 id="text_logo">约起来</h2>
+			</a>
+		</div>
+		<div id="navRight" class="pull_right">
 			<!-- <img>search icon</img> -->
 			<input id="search" type="text" value="搜索一下" />
 			<a id="signin" class="sign" href="javascript:;">登录</a>

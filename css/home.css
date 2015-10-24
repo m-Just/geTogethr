@@ -16,6 +16,23 @@
 	opacity: 0.85;
 }
 
+#navigator > * {
+	line-height: 48px;
+}
+
+#navLeft {
+	margin-left: 20px;
+}
+
+#home_link {
+	text-decoration: none;
+}
+
+#text_logo {
+	margin: 0;
+	color: #eeeeee;
+}
+
 #search {
 	height: 16px;
 	width: 170px;
@@ -26,8 +43,7 @@
 	color: #888888;
 }
 
-#navBars {
-	line-height: 46px;
+#navRight {
 	float: right;
 }
 
