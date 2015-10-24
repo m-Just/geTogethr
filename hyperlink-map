@@ -8,6 +8,7 @@ Hyperlinks Map:
 
 [home] (homepage)
 	#navigator 
+		logo		-> [home]
 		login 		-> [sign-up] & <log-on & log-off>
 		search 		-> [search results]
 		navigation 	-> [undefined]
