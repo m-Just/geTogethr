@@ -1,3 +1,7 @@
+.pull_left {
+	float: left;
+}
+
 .pull_right {
 	float: right;
 }
@@ -48,8 +52,8 @@
 }
 
 #main {
-	position: absolute;
-	z-index: 50;
+	position: relative; /* enable z-index function */
+	z-index: 50;        /* only functions when position is not static */
 	width: 1024px;
 	height: 1024px;
 	margin: auto;
@@ -60,13 +64,11 @@
 	width: 160px;
 	height: 1024px;
 	background: #38B0DE;
-	float: left;
 }
 
 #recommends {
 	width: 864px;
 	height: 1024px;
-	float: left;	
 }
 
 .unit {
