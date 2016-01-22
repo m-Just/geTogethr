@@ -14,7 +14,7 @@
 	<div id="navigator" ng-click="navClicks($event)">
 		<div id="navLeft" class="pull_left">
 			<a id="home_link" href="home.html">
-				<h2 id="text_logo">约起来</h2>
+				<h2 id="text_logo">geTogethr</h2>
 			</a>
 		</div>
 		<div id="navRight" class="pull_right">
@@ -59,7 +59,7 @@
 	var app = angular.module("app", []);
 	app.controller("appCtrl", function($scope) {
 		$scope.clicks = function(evt) {   // handles #search ui display of FOCUSED and UNFOCUSED state
-			if (evt.target !== search) {
+			if (evt.target !== search) {    // can be replaced by html method 'onclick' and 'onblur'
 				if ($('#search').val() == "") {
 					$('#search').val("搜索一下");
 				}
